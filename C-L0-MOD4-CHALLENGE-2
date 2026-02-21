@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+       if (!sc.hasNextLong()) return;
+        long number = sc.nextLong();
+        
+        if (!sc.hasNextInt()) return;
+        int targetDigit = sc.nextInt();
+        
+        int count = 0;
+
+        if (number == 0 && targetDigit == 0) {
+            count = 1;
+        } else {
+            while (number > 0) {
+                if (number % 10 == targetDigit) {
+                    count++;
+                }
+                number /= 10; 
+            }
+        }
+        System.out.println(count);
+    }
+}
