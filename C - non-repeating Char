@@ -1,0 +1,34 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String str = br.readLine();
+
+        if (str == null || str.length() == 0) {
+            return;
+        }
+
+        LinkedHashMap<Character, Integer> map = new LinkedHashMap<>();
+
+        for (char ch : str.toCharArray()) {
+            if (map.containsKey(ch)) {
+                map.put(ch, map.get(ch) + 1);
+            } else {
+                map.put(ch, 1);
+            }
+        }
+
+        for (Map.Entry<Character, Integer> entry : map.entrySet()) {
+            if (entry.getValue() == 1) {
+                System.out.println(entry.getKey());
+                return;
+            }
+        }
+    }
+}
