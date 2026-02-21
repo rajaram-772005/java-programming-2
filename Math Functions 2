@@ -1,0 +1,19 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double floatValue = sc.nextDouble();
+        int sqrtValue = sc.nextInt();
+        int base = sc.nextInt();
+        int power = sc.nextInt();
+
+        System.out.println((int) Math.floor(floatValue));
+        System.out.println((int) Math.ceil(floatValue));
+        System.out.println((int) Math.sqrt(sqrtValue));
+        System.out.println((int) Math.pow(base, power));
+
+    }
+}
