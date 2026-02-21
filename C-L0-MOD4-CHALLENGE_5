@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        if (sc.hasNextInt()) {
+            int num = sc.nextInt();
+
+            if (num == 0) {
+                System.out.print(0);
+            } else {
+                while (num > 0) {
+                    int digit = num % 10;
+                    System.out.print(digit + " "); 
+                    num = num / 10; 
+                }
+            }
+        }
+    }
+}
