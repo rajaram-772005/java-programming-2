@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        long num = sc.nextLong();   // changed to long
+        long original = num;
+        long reverse = 0;
+
+        while (num > 0) {
+            long digit = num % 10;
+            reverse = reverse * 10 + digit;
+            num = num / 10;
+        }
+
+        if (original == reverse) {
+            System.out.print("Palindrome");
+        } else {
+            System.out.print("Not a Palindrome");
+        }
+    }
+}
