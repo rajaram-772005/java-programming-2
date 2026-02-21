@@ -1,0 +1,43 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int age = sc.nextInt();
+        String day = sc.next().toLowerCase();
+        
+        int price = 0;
+        
+        boolean isWeekend = day.equals("saturday") || day.equals("sunday");
+        
+        if (age < 12) {
+            if (isWeekend) {
+                price = 80;
+            } else {
+                price = 100;
+            }
+        } 
+        else if (age >= 12 && age <= 59) {
+            if (isWeekend) {
+                price = 120;
+            } else {
+                price = 150;
+            }
+        } 
+        else {
+            if (isWeekend) {
+                price = 70;
+            } else {
+                price = 90;
+            }
+        }
+        
+        System.out.println(price);
+    }
+}
