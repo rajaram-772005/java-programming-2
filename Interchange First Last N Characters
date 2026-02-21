@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        String S = sc.nextLine();
+        int N = sc.nextInt();
+        
+        int len = S.length();
+        
+        String firstPart = S.substring(0, N);
+        String middlePart = S.substring(N, len - N);
+        String lastPart = S.substring(len - N, len);
+        
+        System.out.println(lastPart + middlePart + firstPart);
+    }
+}
