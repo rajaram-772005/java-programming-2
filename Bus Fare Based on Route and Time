@@ -1,0 +1,41 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        char route = sc.next().charAt(0);
+        int time = sc.nextInt();
+        int fare = 0;
+
+
+        if (route == 'A') {
+            if (time < 12) {
+                fare = 25;
+            } else {
+                fare = 30;
+            }
+        } 
+        else if (route == 'B') {
+            if (time < 12) {
+                fare = 20;
+            } else {
+                fare = 25;
+            }
+        } 
+        else if (route == 'C') {
+            if (time < 12) {
+                fare = 15;
+            } else {
+                fare = 20;
+            }
+        }
+
+        System.out.println(fare);
+    }
+}
